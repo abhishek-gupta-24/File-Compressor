@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build-compressor": "g++ compress.cpp -o compressor && chmod +x compressor",
     "start": "node server.js"
   },
   "keywords": [],

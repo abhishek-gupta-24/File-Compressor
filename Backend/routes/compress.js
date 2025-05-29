@@ -13,7 +13,7 @@ router.post('/', upload.single('file'), (req, res) => {
   const inputPath = path.resolve(req.file.path);
   const outputPath = path.resolve('output/compressed.huff');
 
-  const cmd = `compressor.exe compress "${inputPath}" "${outputPath}"`;
+  const cmd = `./compressor compress "${inputPath}" "${outputPath}"`;
 
   exec(cmd, (error, stdout, stderr) => {
     fs.unlink(inputPath, () => {}); // delete uploaded input file
