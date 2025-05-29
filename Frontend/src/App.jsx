@@ -5,7 +5,7 @@ function App() {
   const [file, setFile] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [mode, setMode] = useState('compress'); // 'compress' or 'decompress'
-
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
@@ -18,7 +18,7 @@ function App() {
     formData.append('file', file);
 
     try {
-      const res = await axios.post(`/api/${mode}`, formData, {
+      const res = await axios.post(`${API_BASE_URL}/api/${mode}`, formData, {
         responseType: 'blob',
       });
 
