@@ -47,22 +47,23 @@ A web application that allows users to **compress** and **decompress** `.txt` fi
 - Node.js
 - Huffman coding algoritm
 
-## Project Structure
+## 📂 Project Structure
 
 file-compressor/
 ├── backend/
-│   ├── middlewares/
-│   ├── output/
-│   ├── routes/
-│   ├── uploads/
-│   ├── compress.cpp
-│   └── server.js
+│ ├── middlewares/
+│ ├── output/
+│ ├── routes/
+│ ├── uploads/
+│ ├── compress.cpp
+│ └── server.js
 ├── frontend/
-│   ├── src/
-│   │   ├── assets
-│   │   ├── app.jsx
-│   │   └── main.jsx
+│ └── src/
+│ ├── assets/
+│ ├── app.jsx
+│ └── main.jsx
 ├── README.md
 ├── index.html
+└── package.json
 └── package.json
 
