@@ -6,7 +6,7 @@ A web application that allows users to **compress** and **decompress** `.txt` fi
 
 ## 🔗 Demo
 
-🚀 Live at: [https://file-compressor-git-main-abhishek-guptas-projects-505703e1.vercel.app/](File_Compressor)
+🚀 Live at: [File_Compressor](https://file-compressor-git-main-abhishek-guptas-projects-505703e1.vercel.app/)
 
 ---
 
