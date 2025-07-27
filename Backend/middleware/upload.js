@@ -1,22 +1,24 @@
 const multer = require('multer');
 const path = require('path');
 
-// Storage config: save file as input.txt in uploads folder
+// Dynamic filename and mimetype check based on file extension
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, '../uploads'));
   },
   filename: (req, file, cb) => {
-    cb(null, 'input.txt'); // always save as input.txt
+    const ext = path.extname(file.originalname);
+    const fixedName = ext === '.txt' ? 'input.txt' : 'input.huff';
+    cb(null, fixedName);
   }
 });
 
-// Filter to accept only text files
 const fileFilter = (req, file, cb) => {
-  if (file.mimetype === 'text/plain') {
+  const ext = path.extname(file.originalname);
+  if (ext === '.txt' || ext === '.huff') {
     cb(null, true);
   } else {
-    cb(new Error('Only .txt files are allowed'), false);
+    cb(new Error('Only .txt or .huff files are allowed'), false);
   }
 };
 
